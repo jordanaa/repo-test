@@ -4,11 +4,14 @@
    "icon":"customActivityManual.svg",
    "descriptionMarkdown":"Activity1.md",
    "topology": [{
-      "name": "Topology 4",
+      "name": "Topology 1",
       "actionTitle":"Reserve",
       "description": "Immediate reservation on the specified topology",
       "reservationDuration":"60",
-      "automation": [],
+      "addRepositoryNamePrefix": "false",
+      "automation": [
+         {"testPath": "activity/sleep.fftc"}
+      ],
       "interaction":[]
     }]
 }
