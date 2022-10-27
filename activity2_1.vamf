@@ -1,45 +1,69 @@
-{
-   "name":"Activity 2 - Repo 2",
-   "shortDescription": "Test Activity on eduard-repo2 in master branch",
+{  "name":"Activity 2 - Repo 2",
+   "shortDescription": "Test Activity on eduard-repo in master branch. Updated after upgrade",
    "icon":"customActivityManual.svg",
    "descriptionMarkdown":"Activity1.md",
-   "topology": [{
+   "topology": [
+{
       "name": "Topology 1",
       "actionTitle":"Reserve",
-      "description": "Immediate reservation on the specified topology",
-      "reservationDuration":"60",
-      "addRepositoryNamePrefix": "false",
+      "description": "Create an immediate reservation on the topology",
+      "reservationDuration":"",
       "automation": [
-         {"testPath": "andreea/sleep.fftc"}
+         {
+            "testPath": "andreea/activity_catalog_assets/sleep.fftc",
+            "allowToRunWithOptions": true,
+            "parametersList":[
+               {
+                  "name": "manifestParam1",
+                  "value": "testValue1",
+                  "type": "TEXT",
+                  "description": "Test Description" 
+               }
+            ]
+         },
+         {
+            "testPath": "andreea/activity_catalog_assets/nothing.fftc",
+            "allowToRunWithOptions": true,
+            "name": "NewNameManifest",
+            "parametersList": [
+               {
+                  "name": "manifestParam2",
+                  "value": "testValue2",
+                  "type": "TEXT",
+                  "description": "Test Description" 
+               }
+            ]
+         }
       ],
-      "interaction":[]
-    }],
-    "startupTasks": [
+     "startupTasks": [
       {
-        "testPath": "andreea/sleep.fftc",
-	     "requirements":[
+        "testPath": "andreea/activity_catalog_assets/parameters.fftc",
+        "parametersList": [
 						{
-							"name": "agent_name",
-							"value": "jordan"
-						},
-						{
-							"name": "pool",
-							"value": "startupteardown"
-						},
-						{
-							"name": "pool",
-							"value": "triggered"
-						},
-						{
-							"name": "random",
-							"value": "value"
+							"name": "parameter1",
+							"type": "INTEGER",
+							"value": "27"
 						}
-					],
-
+					]
+      }
+      ],
     "teardownTasks": [
       {
-        "testPath": "andreea/sleep.fftc",
-        "requirements":[
+        "testPath": "andreea/activity_catalog_assets/parameters.fftc",
+	"parameterFilePath": "andreea/activity_catalog_assets/parameters.ffpt",
+        "parametersList": [
+						{
+							"name": "parameter1",
+							"type": "INTEGER",
+							"value": "27"
+						},
+						{
+							"name": "parameter2",
+							"type": "TEXT",
+							"value": "testValue3"
+						}
+					],
+	"requirements":[
 						{
 							"name": "agent_name",
 							"value": "jordan"
@@ -54,6 +78,6 @@
 						}
 					]
       }
+      ]
     }]
-}
 }
