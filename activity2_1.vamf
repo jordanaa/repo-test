@@ -44,7 +44,7 @@
 							"type": "INTEGER",
 							"value": "27"
 						}
-					]
+					],
 	"requirements":[
 						{
 							"name": "agent_name",
