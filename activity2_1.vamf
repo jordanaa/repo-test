@@ -13,5 +13,47 @@
          {"testPath": "andreea/sleep.fftc"}
       ],
       "interaction":[]
+    }],
+    "startupTasks": [
+      {
+        "testPath": "andreea/sleep.fftc",
+	     "requirements":[
+						{
+							"name": "agent_name",
+							"value": "jordan"
+						},
+						{
+							"name": "pool",
+							"value": "startupteardown"
+						},
+						{
+							"name": "pool",
+							"value": "triggered"
+						},
+						{
+							"name": "random",
+							"value": "value"
+						}
+					],
+
+    "teardownTasks": [
+      {
+        "testPath": "andreea/sleep.fftc",
+        "requirements":[
+						{
+							"name": "agent_name",
+							"value": "jordan"
+						},
+						{
+							"name": "pool",
+							"value": "startupteardown"
+						},
+						{
+							"name": "pool",
+							"value": "triggered"
+						}
+					]
+      }
     }]
+}
 }
