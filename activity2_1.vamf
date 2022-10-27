@@ -10,7 +10,7 @@
       "reservationDuration":"60",
       "addRepositoryNamePrefix": "false",
       "automation": [
-         {"testPath": "activity/sleep.fftc"}
+         {"testPath": "andreea/sleep.fftc"}
       ],
       "interaction":[]
     }]
