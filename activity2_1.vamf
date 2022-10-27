@@ -1,5 +1,5 @@
 {  "name":"Activity 2 - Repo 2",
-   "shortDescription": "Test Activity on eduard-repo in master branch. Updated after upgrade",
+   "shortDescription": "Different repos for Activity Catalog and startup/teardown task",
    "icon":"customActivityManual.svg",
    "descriptionMarkdown":"Activity1.md",
    "topology": [
